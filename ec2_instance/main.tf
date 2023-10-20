@@ -14,7 +14,7 @@ resource "aws_instance" "spacelift_demo_instance" {
   }
 
 }
-resource "aws_ebs_volume" "spacelift_demo_volume" {
+/* resource "aws_ebs_volume" "spacelift_demo_volume" {
     availability_zone = "us-east-1d"
     size = 25
     encrypted = true
@@ -31,4 +31,4 @@ resource "aws_volume_attachment" "ebs_att" {
   instance_id = aws_instance.spacelift_demo_instance.id
 
   depends_on = [ aws_ebs_volume.spacelift_demo_volume, aws_instance.spacelift_demo_instance]
-}
+} */
