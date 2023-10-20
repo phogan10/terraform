@@ -1,0 +1,7 @@
+variable "secretpassword" {
+  
+}
+
+variable "nonsecret" {
+  
+}

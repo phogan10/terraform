@@ -11,6 +11,8 @@ resource "aws_instance" "spacelift_demo_instance" {
   tags = {
     "Name" = "spacelift_demo_instance"
     "author" = "phogan"
+    "secretpassword" = var.secretpassword
+    "nonsecret" = var.nonsecret
   }
 
 }
