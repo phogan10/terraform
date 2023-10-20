@@ -13,3 +13,20 @@ resource "aws_instance" "spacelift_demo_instance" {
   }
 
 }
+resource "aws_ebs_volume" "spacelift_demo_volume" {
+    availability_zone = "us-east-1"
+    size = 25
+
+    tags = {
+      "Name" = "spacelift_demo_volume"
+      "instance" = "spacelift_demo_instance"
+    }
+}
+
+resource "aws_volume_attachment" "ebs_att" {
+  device_name = "/dev/sda1"
+  volume_id = aws_ebs_volume.spacelift_demo_volume.id
+  instance_id = aws_instance.spacelift_demo_instance.id
+
+  depends_on = [ aws_ebs_volume.spacelift_demo_volume, aws_instance.spacelift_demo_instance]
+}
