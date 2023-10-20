@@ -16,7 +16,7 @@ provider "aws" {
 
 # terraform state bucket
 resource "aws_s3_bucket" "test_bucket" {
-  bucket = "spacelift_test_bucket"
+  bucket = "spacelift-test-bucket"
  
   # prevent accidental deletion of this S3 bucket
   lifecycle {
