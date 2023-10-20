@@ -14,7 +14,7 @@ resource "aws_instance" "spacelift_demo_instance" {
 
 }
 resource "aws_ebs_volume" "spacelift_demo_volume" {
-    availability_zone = "us-east-1"
+    availability_zone = "us-east-1a"
     size = 25
 
     tags = {
