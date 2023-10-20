@@ -17,7 +17,7 @@ resource "aws_instance" "spacelift_demo_instance" {
 resource "aws_ebs_volume" "spacelift_demo_volume" {
     availability_zone = "us-east-1d"
     size = 25
-    encrypted = True
+    encrypted = true
 
     tags = {
       "Name" = "spacelift_demo_volume"
